@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$mentorNameHash() => r'a1cc3d39b9b0b65710c8fd001f4e2baf3ed33734';
+String _$mentorNameHash() => r'4f40a949af8bd6bd8e346c57052cbed9dfb597fe';
 
 /// See also [MentorName].
 @ProviderFor(MentorName)
@@ -22,7 +22,7 @@ final mentorNameProvider =
     );
 
 typedef _$MentorName = AutoDisposeNotifier<String>;
-String _$studentNameHash() => r'cf663181d6575471919df62483ee3d92d81a7dfc';
+String _$studentNameHash() => r'829627d55ad599be61116b765ca306b8319e0719';
 
 /// See also [StudentName].
 @ProviderFor(StudentName)
@@ -38,7 +38,7 @@ final studentNameProvider =
     );
 
 typedef _$StudentName = AutoDisposeNotifier<String>;
-String _$sessionDetailsHash() => r'a45506ecbda8cfb2a2b5673071f2268da51f4422';
+String _$sessionDetailsHash() => r'042897fd4d02682be92671c1e21de1bd404c3166';
 
 /// See also [SessionDetails].
 @ProviderFor(SessionDetails)
@@ -54,7 +54,7 @@ final sessionDetailsProvider =
     );
 
 typedef _$SessionDetails = AutoDisposeNotifier<String>;
-String _$notesHash() => r'da3b8c7f60ae4225289894190b870e79773b336a';
+String _$notesHash() => r'f14e289e4cdfcebf98e80b76d66cfb552453106f';
 
 /// See also [Notes].
 @ProviderFor(Notes)
