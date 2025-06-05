@@ -6,6 +6,10 @@ import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:web/web.dart' as web;
 import 'package:flutter/foundation.dart' show kIsWeb;
 
+/// !!!!!!!!!!!!!!!!!!
+/// This file is not used and will be deleted
+/// !!!!!!!!!!!!!!!!!!
+
 Future<void> generateAndDownloadPDF(
   String mentorName,
   String studentName,
@@ -17,7 +21,7 @@ Future<void> generateAndDownloadPDF(
   final double pageWidth = document.pageSettings.size.width;
   final double pageHeight = document.pageSettings.size.height;
 
-  document.pageSettings.margins.all = 0;
+  document.pageSettings.margins.all = 72;
 
   // will set margins manually
   // half inch margins (72 points x 0.5 inches = 36 points)
@@ -94,7 +98,61 @@ Future<void> generateAndDownloadPDF(
   document.template.top = header;
   document.template.bottom = footer;
 
-  document.pages.add();
+  final page = document.pages.add();
+
+  PdfTextElement textElement = PdfTextElement(
+    text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis imperdiet felis, ac tincidunt nisi. Curabitur malesuada odio et dolor gravida, sit amet commodo massa volutpat. Mauris molestie hendrerit interdum. Mauris ac quam egestas, ornare magna id, pulvinar neque. Donec ullamcorper euismod bibendum. Donec in pellentesque nulla. Morbi bibendum placerat odio, ut pretium erat. In in magna placerat nisi sollicitudin venenatis ut ac libero. Duis porttitor a tellus eget tempor. Curabitur pellentesque lacus non tincidunt consectetur. Nullam quis ullamcorper eros, sed consequat nunc. Integer eu dolor quis diam dapibus cursus non eget felis. Donec auctor volutpat gravida. Phasellus justo urna, ultricies id commodo et, porta ornare neque. Suspendisse potenti. Fusce molestie quam sit amet elementum euismod.',
+    font: bodyFont,
+  );
+
+  PdfLayoutResult layoutResult = textElement.draw(
+    page: page,
+    bounds: Rect.fromLTWH(
+      0,
+      150,
+      document.pageSettings.width,
+      page.getClientSize().height,
+    ),
+  )!;
+
+  textElement.text = 'Top 5 sales stores';
+  textElement.font = PdfStandardFont(
+    PdfFontFamily.helvetica,
+    14,
+    style: PdfFontStyle.bold,
+  );
+
+  //Draw the header text on page, below the paragraph text with a height gap of 20 and maintain the position in PdfLayoutResult
+  layoutResult = textElement.draw(
+    page: page,
+    bounds: Rect.fromLTWH(90, layoutResult.bounds.bottom + 20, 0, 0),
+  )!;
+
+  textElement.text =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis imperdiet felis, ac tincidunt nisi. Curabitur malesuada odio et dolor gravida, sit amet commodo massa volutpat. Mauris molestie hendrerit interdum. Mauris ac quam egestas, ornare magna id, pulvinar neque. Donec ullamcorper euismod bibendum. Donec in pellentesque nulla. Morbi bibendum placerat odio, ut pretium erat. In in magna placerat nisi sollicitudin venenatis ut ac libero. Duis porttitor a tellus eget tempor. Curabitur pellentesque lacus non tincidunt consectetur. Nullam quis ullamcorper eros, sed consequat nunc. Integer eu dolor quis diam dapibus cursus non eget felis. Donec auctor volutpat gravida. Phasellus justo urna, ultricies id commodo et, porta ornare neque. Suspendisse potenti. Fusce molestie quam sit amet elementum euismod.';
+  textElement.font = bodyFont;
+
+  layoutResult = textElement.draw(
+    page: page,
+    bounds: Rect.fromLTWH(
+      layoutResult.bounds.left,
+      layoutResult.bounds.bottom + 18,
+      page.getClientSize().width,
+      0,
+    ),
+  )!;
+
+  // page.graphics.drawString(
+  //   "Topeka Public Library",
+  //   bodyFont,
+  //   bounds: Rect.fromLTWH(
+  //     100,
+  //     500,
+  //     document.pageSettings.width,
+  //     bodyFont.height,
+  //   ),
+  // );
 
   Uint8List bytes = await document.saveAsBytes();
   document.dispose();

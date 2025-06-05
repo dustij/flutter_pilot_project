@@ -4,13 +4,13 @@ class PdfLayoutSpec {
 
   // Header
   static const double headerHeight = 122.0;
-  static const double logoWidth = 104.046;
+  static const double logoWidth = 104.0;
   static const double logoHeight = 36.0;
   static const double titleFontSize = 24.0;
   static const double titleLeading = 32.0;
   static const double titlePaddingTop = 36.0;
   static const double titlePaddingBottom = 18.0;
-  static const double headerDividerThickness = 2.0;
+  static const double titleDividerThickness = 2.0;
 
   // Body
   static const double bodyGap = 18.0;
