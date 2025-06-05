@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mentor_form/screens/form_screen.dart';
+
+import '../screens/form_screen.dart';
 
 void main() {
   runApp(ProviderScope(child: const MainApp()));
@@ -12,7 +13,7 @@ class MainApp extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
-      title: 'Mentor PDF Generator',
+      title: 'Mentor Session PDF Generator',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const FormScreen(),
     );

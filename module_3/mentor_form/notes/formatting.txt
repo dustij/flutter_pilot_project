@@ -1,0 +1,27 @@
+margins: 72 pt
+
+header:
+  height: 122 pt
+  logo_w: 104.046 pt
+  logo_h: 36 pt
+  title_style: bold
+  title_font_size: 24 pt
+  title_font_leading: 32 pt
+  title_pad_top: 36 pt
+  title_pad_bot: 18 pt
+  divider: 2 pt
+
+body:
+  gap: 18 pt
+  label_w: 150 pt
+  label_style: medium
+  data_style: regular
+  font_size: 12 pt
+  divider: 0.5 pt
+
+footer:
+  height: 59.374 pt
+  gap_to_info: 18 pt
+  info_height: 41.374 pt
+  gap_to_page_num: 31.561 pt
+  page_num_box_width: 274.779 pt

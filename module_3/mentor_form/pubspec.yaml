@@ -16,6 +16,7 @@ dependencies:
   pdf: ^3.11.3
   share_plus: ^11.0.0
   web: ^1.1.1
+  syncfusion_flutter_pdf: ^29.2.8
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +29,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/CSC_logo_500x173.png
+    - assets/fonts/Roboto/static/Roboto-Regular.ttf
+    - assets/fonts/Roboto/static/Roboto-Medium.ttf
+    - assets/fonts/Roboto/static/Roboto-Bold.ttf
