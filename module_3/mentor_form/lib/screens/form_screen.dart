@@ -67,7 +67,6 @@ class FormScreen extends HookConsumerWidget {
                       provider: mentorNameProvider,
                       labelText: 'Mentor Name',
                       hintText: 'Enter mentor name',
-                      maxLength: 46,
                       validator: (val) {
                         if (val == null || val.trim().isEmpty) {
                           return 'Please enter mentor name';
@@ -83,7 +82,6 @@ class FormScreen extends HookConsumerWidget {
                       provider: studentNameProvider,
                       labelText: 'Student Name',
                       hintText: 'Enter student name',
-                      maxLength: 46,
                       validator: (val) {
                         if (val == null || val.trim().isEmpty) {
                           return 'Please enter student name';
@@ -99,7 +97,6 @@ class FormScreen extends HookConsumerWidget {
                       provider: sessionDetailsProvider,
                       labelText: 'Session Details',
                       hintText: 'Enter session details',
-                      maxLength: 46,
                       validator: (val) {
                         if (val == null || val.trim().isEmpty) {
                           return 'Please enter session details';

@@ -16,6 +16,7 @@ class PdfLayoutSpec {
   // Body
   static const double bodyGap = 18.0;
   static const double labelWidth = 150.0;
+  static const double fieldWidth = 301.28;
   static const double bodyFontSize = 12.0;
   static const double bodyLeading = 14.4;
   static const double bodyDividerThickness = 0.5;

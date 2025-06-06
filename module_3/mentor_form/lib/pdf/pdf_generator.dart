@@ -74,7 +74,12 @@ Future<void> generateAndDownloadPDF(
 
   layoutResult = textElement.draw(
     page: page,
-    bounds: Rect.fromLTWH(layoutResult!.bounds.right, y, 0, 0),
+    bounds: Rect.fromLTWH(
+      layoutResult!.bounds.right,
+      y,
+      PdfLayoutSpec.fieldWidth,
+      0,
+    ),
   );
 
   // Divider
@@ -100,7 +105,12 @@ Future<void> generateAndDownloadPDF(
 
   layoutResult = textElement.draw(
     page: page,
-    bounds: Rect.fromLTWH(layoutResult!.bounds.right, y, 0, 0),
+    bounds: Rect.fromLTWH(
+      layoutResult!.bounds.right,
+      y,
+      PdfLayoutSpec.fieldWidth,
+      0,
+    ),
   );
 
   // Divider
@@ -126,7 +136,12 @@ Future<void> generateAndDownloadPDF(
 
   layoutResult = textElement.draw(
     page: page,
-    bounds: Rect.fromLTWH(layoutResult!.bounds.right, y, 0, 0),
+    bounds: Rect.fromLTWH(
+      layoutResult!.bounds.right,
+      y,
+      PdfLayoutSpec.fieldWidth,
+      0,
+    ),
   );
 
   // Divider
@@ -150,7 +165,7 @@ Future<void> generateAndDownloadPDF(
   final notesTextBounds = Rect.fromLTWH(
     layoutResult!.bounds.right,
     y,
-    pageWidth - PdfLayoutSpec.labelWidth,
+    PdfLayoutSpec.fieldWidth,
     pageHeight - PdfLayoutSpec.footerHeight - PdfLayoutSpec.headerHeight - y,
   );
 
